@@ -103,6 +103,7 @@ a#=>[1,2,3,1,2,3,1,2,3,1]
 
 # with_indexの引数に初期値を渡せる
 # mapやdelete_ifなどのメソッドにもwith_indexは使える
+fruits = [ "apple", "orange", "melin"]
 fruits.each.with_index(1){|fruit,i|puts"#{i}:#{fruit}"}
 #=>1:apple
 #2:orange
@@ -115,3 +116,10 @@ a #=>[10,11,12,13,14]　10から14まで処理を繰り返す　down_toもある
 a=[]
 1.step(10,2){|n|a<<n}
 a #=>[1,3,5,7,9]　１から１０まで２ずつ飛ばしながら処理をする
+
+
+# ハッシュを渡すことができる
+currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
+currencies.each do |key,value|
+    puts "#{key}: #{value}"
+end
