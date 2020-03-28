@@ -2,9 +2,14 @@ a = { 'x' => 1, 'y' => 2, 'z' => 3}
 b = { 'z' => 3, 'y' => 2, 'x' => 1}
 a == b #=> true 順番が違ってもキーとヴァリューのセットが全てあっているなら同じものとして扱う
 
+a.keys #=> [:x, :y, :z]
+a.values #=> [1, 2, 3]
 
 currencies = { 'japan' => 'yen', 'us' => 'dollar', 'india' => 'rupee'}
-# currencies={japan:'yen',us:'dollar',india:'rupee'}　上の行と中身は一緒
+# currencies={japan:'yen',us:'dollar',india:'rupee'} 上の行と中身は一緒
+currencie.values #=> ['yen', 'dollar', 'rupee']
+currencie.has_key?(:japan) #=> true  has_value?()もできる
+
 
 currencies.delete('italy')#=>nil
 currencies.delete('italy'){|key|"Notfound:#{key}"}
